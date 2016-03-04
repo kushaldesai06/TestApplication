@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    style="@android:style/Theme.NoTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <include
+            android:id="@+id/home_scren_bar"
+            layout="@layout/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp" />
+
+        <LinearLayout
+            android:id="@+id/activity_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_scren_bar"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/llBaseMid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlHeader"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/navigationDrawerFragment"
+        android:name="com.example.kushaldesai.Fragments.NavigationAppDrawerFragment"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout="@layout/navigation_drawer"
+        tools:layout="@layout/navigation_drawer"></fragment>
+
+</android.support.v4.widget.DrawerLayout>

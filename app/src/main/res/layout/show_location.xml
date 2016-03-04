@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f8f8f8"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressIndicator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="150dp"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/progress_green"
+            android:indeterminateDuration="2000"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fab_margin"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Mode Of Transport"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/modeTransport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Car - 40 mins"
+                android:textColor="#000000"
+                android:textSize="@dimen/fab_margin"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/modeTransportOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Car - 40 mins"
+                android:textColor="#000000"
+                android:textSize="@dimen/fab_margin"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/navigate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="#00b588"
+                android:text="Navigate To Map"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <fragment
+            android:id="@+id/find_location_search"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/carpool_findride_datesearch_rl1"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>
